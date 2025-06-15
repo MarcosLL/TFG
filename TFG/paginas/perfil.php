@@ -27,7 +27,7 @@ $avatar = isset($_SESSION['usuario_avatar']) ? $_SESSION['usuario_avatar'] : '..
     <div class="container">
         <header class="menu">
             <div class="logo">
-                <a href="inicio.html"><img src="../imagenes/logo.png" alt="Logo" /></a>
+                <a href="index.html"><img src="../imagenes/logo.png" alt="Logo" /></a>
             </div>
             <nav>
                 <ul>
@@ -37,7 +37,7 @@ $avatar = isset($_SESSION['usuario_avatar']) ? $_SESSION['usuario_avatar'] : '..
                         </form>
                     </li>
                     <li><a href="creacurso.html">Publicar curso</a></li>
-                    <li><a href="inicio.html">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="logout.php">Salir</a></li>
                 </ul>
             </nav>

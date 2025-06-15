@@ -38,7 +38,7 @@ $avatar = !empty($usuario['Foto_perfil']) ? "uploads/" . $usuario['Foto_perfil']
     <div class="container">
         <header class="menu">
             <div class="logo">
-                <a href="inicio.html"><img src="../imagenes/logo.png" alt="Logo" /></a>
+                <a href="index.html"><img src="../imagenes/logo.png" alt="Logo" /></a>
             </div>
             <nav>
                 <ul>
@@ -48,7 +48,7 @@ $avatar = !empty($usuario['Foto_perfil']) ? "uploads/" . $usuario['Foto_perfil']
                         </form>
                     </li>
                     <li><a href="creacurso.html">Publicar curso</a></li>
-                    <li><a href="inicio.html">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="logout.php">Salir</a></li>
                 </ul>
             </nav>

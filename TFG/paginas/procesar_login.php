@@ -34,7 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 : "../imagenes/avatar_default.png";
             
             // Redirigir al usuario a la página principal
-            header("Location: inicio.html");
+            header("Location: index.html");
             exit();
         } else {
             // Contraseña incorrecta, volver al login con mensaje de error

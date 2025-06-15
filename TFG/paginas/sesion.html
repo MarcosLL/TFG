@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Iniciar Sesión</title>
+  <link rel="stylesheet" href="../estilos/menuTop.css" />
+  <link rel="stylesheet" href="../estilos/inicio.css" />
+  <link rel="stylesheet" href="../estilos/iniciarSesion.css" />
+  <link rel="stylesheet" href="../estilos/login.css" />
+  <link rel="stylesheet" href="../estilos/footer.css" />
+  <script>
+    // Mostrar mensajes de error
+    document.addEventListener('DOMContentLoaded', function() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const error = urlParams.get('error');
+      
+      if (error) {
+        let mensaje = '';
+        switch(error) {
+          case 'contraseña_incorrecta':
+            mensaje = 'Contraseña incorrecta';
+            break;
+          case 'usuario_no_encontrado':
+            mensaje = 'Usuario no encontrado';
+            break;
+          case 'metodo_no_permitido':
+            mensaje = 'Método no permitido';
+            break;
+          default:
+            mensaje = 'Error al iniciar sesión';
+        }
+        
+        const errorDiv = document.createElement('div');
+        errorDiv.className = 'error-message';
+        errorDiv.textContent = mensaje;
+        
+        const form = document.querySelector('.login-form');
+        form.insertBefore(errorDiv, form.firstChild);
+      }
+    });
+  </script>
+</head>
+<body>
+  <div class="container">
+    <header class="menu">
+      <div class="logo">
+        <a href="inicio.html"><img src="../imagenes/logo.png" alt="Logo"></a>
+      </div> 
+      <nav>
+        <ul>
+          <li class="search-bar">
+            <form action="#" method="get">
+              <input type="text" name="search" placeholder="Buscar..." aria-label="Buscar">
+            </form>
+          </li>
+          <li><a href="inicio.html">Home</a></li>
+          <li><a href="#">Salir</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="login-wrapper">
+      <form class="login-form" action="procesar_login.php" method="post">
+        <h2>Iniciar Sesión</h2>
+        <input type="text" name="email" placeholder="Usuario o correo" required />
+        <input type="password" name="contraseña" placeholder="Contraseña" required />
+        <button type="submit">Entrar</button>
+
+        <a href="registro.html">
+          <button type="button" class="register-btn">Registrarse</button>
+        </a>
+      </form>
+    </section>
+
+     <footer class="pie">
+  <div class="footer-content">
+    <div class="footer-logo">
+      <img id="minilogo" src="../imagenes/logo.png" alt="Logo">
+      <span class="copyright-text">© 2025 ProClass</span>
+    </div>
+
+     <div class="footer-divider"></div> <!-- Línea separadora -->
+
+    <div class="footer-links">
+      <a href="PoliticaPrivacidad.html">Política de privacidad</a> 
+      <a href="preguntas.html">Preguntas Frecuentes</a>
+      <a href="contacto.html">Contacto</a>
+      
+    </div>
+  </div>
+  
+</footer>
+
+
+  </div>
+</body>
+</html>

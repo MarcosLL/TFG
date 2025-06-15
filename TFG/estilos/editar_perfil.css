@@ -1,0 +1,61 @@
+  .editar-perfil-form {
+            max-width: 600px;
+            margin: 40px auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+
+        .editar-perfil-form h2 {
+            text-align: center;
+            color: #0077b6;
+        }
+
+        .editar-perfil-form label {
+            display: block;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        .editar-perfil-form input[type="text"],
+        .editar-perfil-form input[type="password"],
+        .editar-perfil-form input[type="file"] {
+            width: 100%;
+            padding: 12px;
+            margin-top: 5px;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+        }
+
+        .editar-perfil-form img {
+            display: block;
+            max-width: 120px;
+            margin: 10px auto;
+            border-radius: 50%;
+        }
+
+        .editar-perfil-form button {
+            width: 100%;
+            padding: 14px;
+            margin-top: 25px;
+            text-decoration: none;
+            font-size: 1rem;
+            background: linear-gradient(135deg, #d49f5a, #d66d0a);
+            color: #fff;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+        }
+
+        .editar-perfil-form a {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #0077b6;
+        }
+
+        .editar-perfil-form a:hover {
+            text-decoration: underline;
+        }

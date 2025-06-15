@@ -1,0 +1,35 @@
+.politicas {
+  max-width: 800px;
+  margin: 40px auto;
+  background-color: white;
+  padding: 40px 50px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.politicas h1 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2em;
+  color: #333;
+}
+
+.politicas h2 {
+  font-size: 1.3em;
+  margin-top: 25px;
+  margin-bottom: 10px;
+  color: #444;
+}
+
+.politicas p {
+  font-size: 1.05em;
+  line-height: 1.6;
+  color: #555;
+}
+
+.ultima-actualizacion {
+  margin-top: 40px;
+  font-style: italic;
+  color: #888;
+  text-align: right;
+}

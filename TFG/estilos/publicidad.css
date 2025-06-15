@@ -1,0 +1,13 @@
+.publicidad {
+    background-color: #2ecc71;
+    color: white;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    padding: 20px;
+    font-size: 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+

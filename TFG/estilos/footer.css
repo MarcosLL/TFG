@@ -1,0 +1,73 @@
+/* Estilos del footer */
+
+
+footer {
+  background-color: #363434;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2em;
+  padding: 20px 0;
+  width: 100%;
+}
+
+/* Contenedor interno del footer */
+.footer-content {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+/* Logo completamente alineado a la izquierda */
+.footer-logo {
+  margin-left: 0;
+  padding-left: 100px;
+  display: flex;
+  align-items: center;
+}
+
+/* Imagen del logo */
+#minilogo {
+  width: 60px;
+  height: auto;
+}
+
+/* Línea separadora */
+.footer-divider {
+  height: 40px;
+  border-left: 2px solid #fff;
+  margin: 0 85px;
+}
+
+/* Enlaces a la derecha del divisor */
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+  margin-left: auto; /* Empuja los enlaces lo más a la derecha posible */
+  padding-right: 200px; /* Opcional: espacio entre los enlaces y el borde derecho */
+}
+
+/* Estilos de los enlaces */
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #f39c12;
+}
+
+.copyright-text{
+  display: flex;
+  align-items: center;
+  gap: 25px; /* espacio entre logo y texto */
+  flex: 1;
+  margin-left: 15px;
+  margin-top: 18px;
+  color: white;
+  font-size: 0.6em;
+  font-weight: 500;
+}

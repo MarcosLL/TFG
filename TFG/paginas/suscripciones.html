@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../estilos/inicio.css">
+    <link rel="stylesheet" href="../estilos/menuNav.css">
+    <link rel="stylesheet" href="../estilos/menuTop.css">
+    <link rel="stylesheet" href="../estilos/footer.css">
+    <link rel="stylesheet" href="../estilos/carrusel.css">
+    <link rel="stylesheet" href="../estilos/preguntas.css">
+    <link rel="stylesheet" href="../estilos/politicas.css">
+    <link rel="stylesheet" href="../estilos/contacto.css">
+    <link rel="stylesheet" href="../estilos/suscripciones.css">
+    <title>ProClass - Inicio</title>
+ 
+</head>
+<body>
+    <div class="container">
+        <header class="menu">
+            <div class="logo">
+                <a href="inicio.html"><img src="../imagenes/logo.png" alt="Logo"></a>
+            </div> 
+            <nav>
+                <ul>
+                    <li class="search-bar">
+                        <form id="searchForm" method="get">
+                            <input type="text" name="search" placeholder="Buscar..." aria-label="Buscar">
+                            <button type="button" class="toggle-advanced">Búsqueda avanzada ▼</button>
+                            <div class="search-advanced">
+                                <div class="filtro-grupo">
+                                    <label for="search-categoria">Categoría:</label>
+                                    <select id="search-categoria" name="categoria">
+                                        <option value="">Todas las categorías</option>
+                                        <option value="Cocina">Cocina</option>
+                                        <option value="Música">Música</option>
+                                        <option value="Artesanía">Artesanía</option>
+                                        <option value="Idiomas">Idiomas</option>
+                                        <option value="Arte">Arte</option>
+                                        <option value="Danza">Danza</option>
+                                    </select>
+                                </div>
+                                <div class="filtro-grupo">
+                                    <label for="search-precio">Rango de precios:</label>
+                                    <select id="search-precio" name="precio">
+                                        <option value="">Todos los precios</option>
+                                        <option value="0-50">$0 - $50</option>
+                                        <option value="50-100">$50 - $100</option>
+                                        <option value="100-200">$100 - $200</option>
+                                        <option value="200+">Más de $200</option>
+                                    </select>
+                                </div>
+                                <div class="filtro-grupo">
+                                    <label for="search-ubicacion">Ubicación:</label>
+                                    <input type="text" id="search-ubicacion" name="ubicacion" placeholder="Ciudad o barrio">
+                                </div>
+                                <button type="submit" class="btn-buscar-advanced">Aplicar Filtros</button>
+                            </div>
+                        </form>
+                    </li>
+                    <li><a href="creacurso.html">Publicar curso</a></li>
+                    <li><a href="inicio.html">Home</a></li>
+                    <li><a href="perfil.php">Perfil</a></li>
+                    <li><a href="sesion.html">Ingresar</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="contenido1">
+            <nav>
+                <ul>
+                    <li>
+                        <ul>
+                            <li><a href="#" class="filtro-categoria" data-categoria="Cocina">Cocina</a></li>
+                            <li><a href="#" class="filtro-categoria" data-categoria="Música">Música</a></li>
+                            <li><a href="#" class="filtro-categoria" data-categoria="Artesanía">Artesanía</a></li>
+                            <li><a href="#" class="filtro-categoria" data-categoria="Idiomas">Idiomas</a></li>
+                            <li><a href="#" class="filtro-categoria" data-categoria="Arte">Arte</a></li>
+                            <li><a href="#" class="filtro-categoria" data-categoria="Danza">Danza</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" id="quitar-filtros">Ver todos</a></li>
+                </ul>
+            </nav>
+        </section>
+
+        <main>
+  <section>
+    <h2>¿Por qué suscribirte?</h2><br>
+    <p>Suscribirse a los cursos es totalmente gratuito ya que los precios de los cursos varían en función del usuario que lo publique y este elige su forma de pago, 
+        lo único para lo que es necesario pagar una suscripción es para poder publicar tus propios cursos o talleres.</p><br>
+  </section>
+
+  <section>
+    <h2>Planes de Suscripción</h2>
+
+    <div class="plan">
+      <div class="plan-title">Plan Básico</div>
+      <div class="plan-price">€39.99 / año</div>
+      <p>Puedes publicar hasta 10 clases al año.</p>
+      <a href="#" class="cta-button">Suscribirme</a>
+    </div>
+
+    <div class="plan">
+      <div class="plan-title">Plan Premium</div>
+      <div class="plan-price">€79.99 / año</div>
+      <p>Puedes publicar hasta 50 clases al año.</p>
+      <a href="#" class="cta-button">Suscribirme</a>
+    </div>
+
+    <div class="plan">
+      <div class="plan-title">Plan Maestro</div>
+      <div class="plan-price">€149.99 / año</div>
+      <p>Publicaciones ilimitadas dentro del año natural desde la realización del pago.</p>
+      <a href="#" class="cta-button">Suscribirme</a>
+    </div>
+  </section>
+
+
+</main>
+
+
+         <footer class="pie">
+  <div class="footer-content">
+    <div class="footer-logo">
+      <img id="minilogo" src="../imagenes/logo.png" alt="Logo">
+      <span class="copyright-text">© 2025 ProClass</span>
+    </div>
+
+     <div class="footer-divider"></div> <!-- Línea separadora -->
+
+    <div class="footer-links">
+      <a href="PoliticaPrivacidad.html">Política de privacidad</a> 
+      <a href="preguntas.html">Preguntas Frecuentes</a>
+      <a href="contacto.html">Contacto</a>
+      
+    </div>
+  </div>
+</footer>
+    </div>
+
+</body>
+</html>

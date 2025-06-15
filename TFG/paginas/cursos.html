@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../estilos/inicio.css">
+    <link rel="stylesheet" href="../estilos/menuNav.css">
+    <link rel="stylesheet" href="../estilos/menuTop.css">
+    <link rel="stylesheet" href="../estilos/footer.css">
+    <link rel="stylesheet" href="../estilos/carrusel.css">
+    <title>Todos los Cursos</title>
+</head>
+<body>
+    <div class="container">
+        <header class="menu">
+            <div class="logo">
+                <a href="inicio.html"><img src="../imagenes/logo.png" alt="Logo"></a>
+            </div> 
+            <nav>
+                <ul>
+                    <li class="search-bar">
+                        <form action="buscador_cursos.html" method="get">
+                            <input type="text" name="search" placeholder="Buscar..." aria-label="Buscar">
+                        </form>
+                    </li>
+                    <li><a href="creacurso.html">Publicar curso</a></li>
+                    <li><a href="perfil.php">Perfil</a></li>
+                    <li><a href="sesion.html">Ingresar</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="contenido1">
+            <nav>
+                <ul>
+                    <li>
+                        <ul>
+                            <li><a href="cursos.html?categoria=Cocina">Cocina</a></li>
+                            <li><a href="cursos.html?categoria=Música">Música</a></li>
+                            <li><a href="cursos.html?categoria=Artesanía">Artesanía</a></li>
+                            <li><a href="cursos.html?categoria=Idiomas">Idiomas</a></li>
+                            <li><a href="cursos.html?categoria=Arte">Arte</a></li>
+                            <li><a href="cursos.html?categoria=Danza">Danza</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="buscador_cursos.html">Búsqueda avanzada</a></li>
+                </ul>
+            </nav>
+        </section>
+
+        <section class="contenido2">
+            <h2>Cursos Disponibles</h2>
+            <div class="cursos-grid" id="cursosGrid">
+                <!-- Los cursos se cargarán aquí dinámicamente -->
+            </div>
+        </section>
+
+        <section class="contenido3">
+            <div class="paginacion">
+                <button id="btnAnterior">Anterior</button>
+                <span id="paginaActual">1</span>
+                <button id="btnSiguiente">Siguiente</button>
+            </div>
+        </section>
+
+         <footer class="pie">
+  <div class="footer-content">
+    <div class="footer-logo">
+      <img id="minilogo" src="../imagenes/logo.png" alt="Logo">
+      <span class="copyright-text">© 2025 ProClass</span>
+    </div>
+
+     <div class="footer-divider"></div> <!-- Línea separadora -->
+
+    <div class="footer-links">
+      <a href="PoliticaPrivacidad.html">Política de privacidad</a>  
+      <a href="preguntas.html">Preguntas Frecuentes</a>
+      <a href="contacto.html">Contacto</a>
+      
+    </div>
+  </div>
+</footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Variables para paginación
+            let paginaActual = 1;
+            const cursosPorPagina = 4; // Mostrar 4 cursos como en el carrusel
+            
+            // Elementos del DOM
+            const cursosGrid = document.getElementById('cursosGrid');
+            const btnAnterior = document.getElementById('btnAnterior');
+            const btnSiguiente = document.getElementById('btnSiguiente');
+            const paginaActualSpan = document.getElementById('paginaActual');
+            
+            // Obtener parámetros de URL (si vienen del buscador o categoría)
+            const urlParams = new URLSearchParams(window.location.search);
+            const categoria = urlParams.get('categoria') || '';
+            
+            // Cargar cursos iniciales
+            cargarCursos();
+            
+            // Event listeners para paginación
+            btnAnterior.addEventListener('click', function() {
+                if (paginaActual > 1) {
+                    paginaActual--;
+                    cargarCursos();
+                }
+            });
+            
+            btnSiguiente.addEventListener('click', function() {
+                paginaActual++;
+                cargarCursos();
+            });
+            
+            // Función para cargar cursos
+            function cargarCursos() {
+                const params = new URLSearchParams();
+                
+                // Agregar parámetros de filtro si existen
+                if (categoria) params.append('categoria', categoria);
+                
+                // Agregar parámetros de paginación
+                params.append('pagina', paginaActual);
+                params.append('porPagina', cursosPorPagina);
+                
+                // Realizar petición AJAX
+                fetch(`../php/get_cursos.php?${params.toString()}`)
+                    .then(response => response.json())
+                    .then(data => {
+                        mostrarCursos(data.cursos);
+                        actualizarPaginacion(data.total);
+                    })
+                    .catch(error => console.error('Error:', error));
+            }
+            
+            // Función para mostrar cursos en el grid
+            function mostrarCursos(cursos) {
+                cursosGrid.innerHTML = '';
+                
+                if (cursos.length === 0) {
+                    cursosGrid.innerHTML = '<p>No se encontraron cursos.</p>';
+                    return;
+                }
+                
+                cursos.forEach(curso => {
+                    const cursoElement = document.createElement('div');
+                    cursoElement.className = 'curso-item';
+                    cursoElement.innerHTML = `
+                        <img src="../uploads/${curso.imagen || 'default-course.jpg'}" alt="${curso.titulo}">
+                        <h3>${curso.titulo}</h3>
+                        <p>${curso.tema} - $${curso.precio}</p>
+                        <a href="detalle_curso.html?id=${curso.id}">Ver detalles</a>
+                    `;
+                    cursosGrid.appendChild(cursoElement);
+                });
+            }
+            
+            // Función para actualizar controles de paginación
+            function actualizarPaginacion(totalCursos) {
+                paginaActualSpan.textContent = paginaActual;
+                
+                const totalPaginas = Math.ceil(totalCursos / cursosPorPagina);
+                btnAnterior.disabled = paginaActual <= 1;
+                btnSiguiente.disabled = paginaActual >= totalPaginas;
+            }
+        });
+    </script>
+</body>
+</html>

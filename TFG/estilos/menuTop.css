@@ -1,0 +1,64 @@
+.menu {
+    width: 100%;
+    background-color: #333333;
+    color: white;
+    padding: 10px 40px; /* Espaciado interno */
+    display: flex;
+    justify-content: space-between; /* Logo a la izquierda, menú a la derecha */
+    align-items: center;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .logo img {
+    width: 120px;
+    height: auto;
+  }
+  
+  /* Menú de navegación */
+  .menu nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .menu nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.4rem;
+    transition: color 0.3s;
+  }
+  
+  .menu nav ul li a:hover {
+    color: #f39c12;
+  }
+  
+  /* Estilos para la barra de búsqueda */
+  .search-bar {
+    display: flex;
+    align-items: center;
+  }
+  
+  .search-bar input {
+    padding: 8px 120px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 20px;
+    margin-right: 10px;
+  }
+  
+  .search-bar button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  
+  .search-bar button:hover {
+    color: #f39c12;
+  }
+  

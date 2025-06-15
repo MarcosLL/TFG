@@ -1,0 +1,46 @@
+/***********************     ESTILOS DE CONTENIDO 1      *************************************************/
+
+/* Estilo para la sección de contenido1 */
+.contenido1 {
+    background-color: #414141;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 1.5em;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    overflow: hidden; /* Evita el desbordamiento del contenido */
+    box-sizing: border-box; /* Incluye el padding en el ancho/alto total */
+}
+
+/* Estilo para el menú dentro de contenido1 */
+.contenido1 nav ul {
+    list-style-type: none; /* Elimina los puntos de lista */
+    padding: 0;
+    margin: 0;
+    display: flex; /* Los elementos estarán en fila */
+    justify-content: center; /* Alinea el menú en el centro */
+    flex-wrap: wrap; /* Asegura que el contenido se ajuste en pantallas pequeñas */
+}
+
+/* Estilo de los enlaces en contenido1 */
+.contenido1 nav ul li {
+    margin-left: 20px; /* Espaciado entre los elementos */
+    position: relative; /* Necesario para el submenú */
+    white-space: nowrap; /* Evita que los enlaces se rompan en varias líneas */
+}
+
+/* Estilo de los enlaces del menú */
+.contenido1 nav ul li a {
+    text-decoration: none; /* Elimina el subrayado */
+    color: white;
+    font-size: 1em;
+    padding: 10px;
+    transition: color 0.3s; /* Transición suave para el hover */
+}
+
+.contenido1 nav ul li a:hover {
+    color: #f39c12; /* Cambia el color al pasar el cursor */
+}
+

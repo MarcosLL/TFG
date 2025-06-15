@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../estilos/inicio.css">
+    <link rel="stylesheet" href="../estilos/menuNav.css">
+    <link rel="stylesheet" href="../estilos/menuTop.css">
+    <link rel="stylesheet" href="../estilos/footer.css">
+    <link rel="stylesheet" href="../estilos/carrusel.css">
+    <link rel="stylesheet" href="../estilos/preguntas.css">
+    <link rel="stylesheet" href="../estilos/politicas.css">
+    <title>ProClass - Inicio</title>
+ 
+</head>
+<body>
+    <div class="container">
+        <header class="menu">
+            <div class="logo">
+                <a href="inicio.html"><img src="../imagenes/logo.png" alt="Logo"></a>
+            </div> 
+            <nav>
+                <ul>
+                    <li class="search-bar">
+                        <form id="searchForm" method="get">
+                            <input type="text" name="search" placeholder="Buscar..." aria-label="Buscar">
+                            <button type="button" class="toggle-advanced">Búsqueda avanzada ▼</button>
+                            <div class="search-advanced">
+                                <div class="filtro-grupo">
+                                    <label for="search-categoria">Categoría:</label>
+                                    <select id="search-categoria" name="categoria">
+                                        <option value="">Todas las categorías</option>
+                                        <option value="Cocina">Cocina</option>
+                                        <option value="Música">Música</option>
+                                        <option value="Artesanía">Artesanía</option>
+                                        <option value="Idiomas">Idiomas</option>
+                                        <option value="Arte">Arte</option>
+                                        <option value="Danza">Danza</option>
+                                    </select>
+                                </div>
+                                <div class="filtro-grupo">
+                                    <label for="search-precio">Rango de precios:</label>
+                                    <select id="search-precio" name="precio">
+                                        <option value="">Todos los precios</option>
+                                        <option value="0-50">$0 - $50</option>
+                                        <option value="50-100">$50 - $100</option>
+                                        <option value="100-200">$100 - $200</option>
+                                        <option value="200+">Más de $200</option>
+                                    </select>
+                                </div>
+                                <div class="filtro-grupo">
+                                    <label for="search-ubicacion">Ubicación:</label>
+                                    <input type="text" id="search-ubicacion" name="ubicacion" placeholder="Ciudad o barrio">
+                                </div>
+                                <button type="submit" class="btn-buscar-advanced">Aplicar Filtros</button>
+                            </div>
+                        </form>
+                    </li>
+                    <li><a href="creacurso.html">Publicar curso</a></li>
+                    <li><a href="inicio.html">Home</a></li>
+                    <li><a href="perfil.php">Perfil</a></li>
+                    <li><a href="sesion.html">Ingresar</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="contenido1">
+            <nav>
+                <ul>
+                    <li>
+                        <ul>
+                            <li><a href="#" class="filtro-categoria" data-categoria="Cocina">Cocina</a></li>
+                            <li><a href="#" class="filtro-categoria" data-categoria="Música">Música</a></li>
+                            <li><a href="#" class="filtro-categoria" data-categoria="Artesanía">Artesanía</a></li>
+                            <li><a href="#" class="filtro-categoria" data-categoria="Idiomas">Idiomas</a></li>
+                            <li><a href="#" class="filtro-categoria" data-categoria="Arte">Arte</a></li>
+                            <li><a href="#" class="filtro-categoria" data-categoria="Danza">Danza</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" id="quitar-filtros">Ver todos</a></li>
+                </ul>
+            </nav>
+        </section>
+
+         <div class="politicas">
+    <h1>Política de Privacidad</h1>
+
+    <h2>1. Información que recopilamos</h2>
+    <p>Recopilamos datos personales como nombre, correo electrónico y ubicación al registrarte en ProClass.</p>
+
+    <h2>2. Uso de la información</h2>
+    <p>Utilizamos tus datos para gestionar tu cuenta, mejorar nuestros servicios y personalizar tu experiencia.</p>
+
+    <h2>3. Compartición de datos</h2>
+    <p>No compartimos tu información personal con terceros salvo requerimientos legales o para operar nuestro servicio.</p>
+
+    <h2>4. Cookies</h2>
+    <p>Este sitio utiliza cookies para ofrecer una mejor experiencia. Puedes gestionarlas desde tu navegador.</p>
+
+    <h2>5. Seguridad</h2>
+    <p>Implementamos medidas de seguridad para proteger tu información, aunque también es tu responsabilidad proteger tu contraseña.</p>
+
+    <h2>6. Derechos del usuario</h2>
+    <p>Tienes derecho a acceder, rectificar o eliminar tus datos personales en cualquier momento.</p>
+
+    <h2>7. Cambios en la política</h2>
+    <p>Podemos actualizar esta política. Te notificaremos sobre cambios importantes mediante nuestros canales oficiales.</p>
+
+    <p class="ultima-actualizacion">Última actualización: 11 de junio de 2025</p>
+  </div>
+
+         <footer class="pie">
+  <div class="footer-content">
+    <div class="footer-logo">
+      <img id="minilogo" src="../imagenes/logo.png" alt="Logo">
+      <span class="copyright-text">© 2025 ProClass</span>
+    </div>
+
+     <div class="footer-divider"></div> <!-- Línea separadora -->
+
+    <div class="footer-links">
+      <a href="PoliticaPrivacidad.html">Política de privacidad</a> 
+      <a href="preguntas.html">Preguntas Frecuentes</a>
+      <a href="contacto.html">Contacto</a>
+      
+    </div>
+  </div>
+</footer>
+    </div>
+
+</body>
+</html>

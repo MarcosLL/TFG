@@ -1,0 +1,47 @@
+  main {
+    max-width: 900px;
+    margin: 2em auto;
+    padding: 0 1em;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  h1, h2 {
+    color: #0056b3;
+  }
+  .plan {
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 1em;
+    margin: 1em 0;
+  }
+  .plan-title {
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+  }
+  .plan-price {
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #008000;
+  }
+  .cta-button {
+    display: inline-block;
+    margin-top: 1em;
+    padding: 0.8em 1.5em;
+    background: #0056b3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .faq {
+    margin-top: 2em;
+  }
+  .faq-item {
+    margin-bottom: 1em;
+  }
+  .faq-item strong {
+    display: block;
+    margin-bottom: 0.3em;
+  }

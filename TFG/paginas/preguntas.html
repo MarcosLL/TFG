@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../estilos/inicio.css">
+    <link rel="stylesheet" href="../estilos/menuNav.css">
+    <link rel="stylesheet" href="../estilos/menuTop.css">
+    <link rel="stylesheet" href="../estilos/footer.css">
+    <link rel="stylesheet" href="../estilos/carrusel.css">
+    <link rel="stylesheet" href="../estilos/preguntas.css">
+    <title>ProClass - Inicio</title>
+ 
+</head>
+<body>
+    <div class="container">
+        <header class="menu">
+            <div class="logo">
+                <a href="inicio.html"><img src="../imagenes/logo.png" alt="Logo"></a>
+            </div> 
+            <nav>
+                <ul>
+                    <li class="search-bar">
+                        <form id="searchForm" method="get">
+                            <input type="text" name="search" placeholder="Buscar..." aria-label="Buscar">
+                            <button type="button" class="toggle-advanced">Búsqueda avanzada ▼</button>
+                            <div class="search-advanced">
+                                <div class="filtro-grupo">
+                                    <label for="search-categoria">Categoría:</label>
+                                    <select id="search-categoria" name="categoria">
+                                        <option value="">Todas las categorías</option>
+                                        <option value="Cocina">Cocina</option>
+                                        <option value="Música">Música</option>
+                                        <option value="Artesanía">Artesanía</option>
+                                        <option value="Idiomas">Idiomas</option>
+                                        <option value="Arte">Arte</option>
+                                        <option value="Danza">Danza</option>
+                                    </select>
+                                </div>
+                                <div class="filtro-grupo">
+                                    <label for="search-precio">Rango de precios:</label>
+                                    <select id="search-precio" name="precio">
+                                        <option value="">Todos los precios</option>
+                                        <option value="0-50">$0 - $50</option>
+                                        <option value="50-100">$50 - $100</option>
+                                        <option value="100-200">$100 - $200</option>
+                                        <option value="200+">Más de $200</option>
+                                    </select>
+                                </div>
+                                <div class="filtro-grupo">
+                                    <label for="search-ubicacion">Ubicación:</label>
+                                    <input type="text" id="search-ubicacion" name="ubicacion" placeholder="Ciudad o barrio">
+                                </div>
+                                <button type="submit" class="btn-buscar-advanced">Aplicar Filtros</button>
+                            </div>
+                        </form>
+                    </li>
+                    <li><a href="creacurso.html">Publicar curso</a></li>
+                    <li><a href="perfil.php">Perfil</a></li>
+                    <li><a href="sesion.html">Ingresar</a></li>
+                    <li><a href="inicio.html">Home</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="contenido1">
+            <nav>
+                <ul>
+                    <li>
+                        <ul>
+                            <li><a href="#" class="filtro-categoria" data-categoria="Cocina">Cocina</a></li>
+                            <li><a href="#" class="filtro-categoria" data-categoria="Música">Música</a></li>
+                            <li><a href="#" class="filtro-categoria" data-categoria="Artesanía">Artesanía</a></li>
+                            <li><a href="#" class="filtro-categoria" data-categoria="Idiomas">Idiomas</a></li>
+                            <li><a href="#" class="filtro-categoria" data-categoria="Arte">Arte</a></li>
+                            <li><a href="#" class="filtro-categoria" data-categoria="Danza">Danza</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" id="quitar-filtros">Ver todos</a></li>
+                </ul>
+            </nav>
+        </section>
+
+  <main class="faq-section">
+  <section class="faq-container">
+    <h1>Preguntas Frecuentes</h1>
+
+    <section class="faq-item">
+      <h2>¿Cómo me registro en la plataforma?</h2>
+      <p>Para registrarte, haz clic en "Ingresar" y luego en "Registrarse". Completa el formulario y listo.</p>
+    </section>
+
+    <section class="faq-item">
+      <h2>¿Es gratuito publicar un curso?</h2>
+      <p>No, necesitas tener una cuenta y tienes la opción de pagar una suscripción o por curso publicado.</p>
+    </section>
+
+    <section class="faq-item">
+      <h2>¿Cómo me inscribo en un curso?</h2>
+      <p>Una vez que encuentres un curso que te interese, haz clic en "Inscribirme" y sigue los pasos.</p>
+    </section>
+
+    <section class="faq-item">
+      <h2>¿Puedo eliminar un curso publicado?</h2>
+      <p>Sí, puedes eliminar o editar tus cursos desde la sección "Perfil".</p>
+    </section>
+  </section>
+
+  <section class="faq-container">
+    <h1>Más Preguntas Frecuentes</h1>
+
+    <section class="faq-item">
+      <h2>¿Qué métodos de pago se aceptan?</h2>
+      <p>Aceptamos tarjetas de crédito, débito y PayPal.</p>
+    </section>
+
+    <section class="faq-item">
+      <h2>¿Puedo obtener un certificado al finalizar el curso?</h2>
+      <p>Sí, la mayoría de nuestros cursos ofrecen certificados de finalización.</p>
+    </section>
+
+    <section class="faq-item">
+      <h2>¿Hay soporte si tengo problemas técnicos?</h2>
+      <p>Sí, contamos con un equipo de soporte disponible para ayudarte.</p>
+    </section>
+
+    <section class="faq-item">
+      <h2>¿Puedo cambiar mi curso después de inscribirme?</h2>
+      <p>Depende del curso, pero generalmente puedes solicitar un cambio contactando con soporte.</p>
+    </section>
+  </section>
+</main>
+
+         <footer class="pie">
+  <div class="footer-content">
+    <div class="footer-logo">
+      <img id="minilogo" src="../imagenes/logo.png" alt="Logo">
+      <span class="copyright-text">© 2025 ProClass</span>
+    </div>
+
+     <div class="footer-divider"></div> <!-- Línea separadora -->
+
+    <div class="footer-links">
+      <a href="PoliticaPrivacidad.html">Política de privacidad</a> 
+      <a href="preguntas.html">Preguntas Frecuentes</a>
+      <a href="contacto.html">Contacto</a>
+      
+    </div>
+  </div>
+</footer>
+    </div>
+
+</body>
+</html>

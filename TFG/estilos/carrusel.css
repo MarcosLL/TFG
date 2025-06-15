@@ -1,0 +1,33 @@
+/* Estilos del carrusel */
+
+.contenido3 {
+    background-color: rgb(174, 230, 230);
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .carrusel-container {
+    max-width: 90vw; /* Limita el ancho */
+    overflow: hidden; /* Oculta scroll */
+    position: relative;
+  }
+  
+  .carrusel {
+    display: flex;
+    gap: 1rem;
+    animation: scrollAuto 12s linear infinite;
+  }
+  
+  .carrusel img {
+    width: 250px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 1rem;
+  }
+  
+  /* Animación */
+  @keyframes scrollAuto {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); } /* Ajusta si hay más o menos imágenes */
+  }

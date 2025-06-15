@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Publicar Curso</title>
+  <link rel="stylesheet" href="../estilos/menuTop.css">
+  <link rel="stylesheet" href="../estilos/inicio.css">
+  <link rel="stylesheet" href="../estilos/creacurso.css">
+  <link rel="stylesheet" href="../estilos/footer.css">
+  
+
+</head>
+<body>    
+  <header class="menu">
+    <div class="logo">
+      <a href="inicio.html"><img src="../imagenes/logo.png" alt="Logo"></a>
+    </div> 
+    <nav>
+      <ul>
+        <li class="search-bar">
+          <form action="#" method="get">
+            <input type="text" name="search" placeholder="Buscar cursos..." aria-label="Buscar">
+          </form>
+        </li>
+        <li><a href="perfil.php">Perfil</a></li>
+        <li><a href="inicio.html">Home</a></li>
+        <li><a href="#">Salir</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  
+
+  <main class="container">
+    <form class="form-container" method="post" action="procesar_curso.php" enctype="multipart/form-data">
+      <h2>Publicar Curso</h2>
+
+      <div class="form-group">
+        <label for="titulo">Título del Curso</label>
+        <input type="text" id="titulo" name="titulo" placeholder="Ej: Curso de cocina Japonesa" required>
+      </div>
+
+      <div class="form-group">
+  <label for="categoria">Categoría</label>
+  <select id="categoria" name="categoria" required>
+    <option value="" disabled selected>Selecciona una categoría</option>
+    <option value="Cocina">Cocina</option>
+    <option value="Programación">Informática</option>
+    <option value="Programación">Audiovisuales</option>
+    <option value="Idiomas">Idiomas</option>
+    <option value="Arte">Arte</option>
+    <option value="Música">Música</option>
+    <option value="Fotografía">Danza</option>
+    <option value="Deportes">Artesanía</option>
+  </select>
+</div>
+
+      <div class="form-group">
+        <label for="descripcion">Descripción</label>
+        <textarea id="descripcion" name="descripcion" placeholder="Aprende a hacer sushi..." required></textarea>
+      </div>
+
+      <div class="form-group">
+    <label for="ubicacion">Ubicación del Curso</label>
+    <input type="text" id="ubicacion" name="ubicacion" placeholder="Ej: Madrid" required>
+  </div>
+
+      <div class="form-group">
+        <label for="fecha">Fecha de Inicio</label>
+        <input type="date" id="fecha" name="fecha" required>
+      </div>
+
+      <div class="form-group">
+        <label for="duracion">Duración (horas)</label>
+        <input type="number" id="duracion" name="duracion" min="1" placeholder="10" required>
+      </div>
+
+      <div class="form-group">
+        <label for="precio">Precio (€)</label>
+        <input type="number" id="precio" name="precio" step="0.01" min="0" placeholder="45.00" required>
+      </div>
+
+      <div class="form-group">
+        <label for="imagen">Imagen del Curso</label>
+        <input type="file" id="imagen" name="imagen" accept="image/*">
+      </div>
+
+      <div class="form-group">
+        <button type="submit">Publicar Curso</button>
+      </div>
+    </form>
+  </main>
+
+ <footer class="pie">
+  <div class="footer-content">
+    <div class="footer-logo">
+      <img id="minilogo" src="../imagenes/logo.png" alt="Logo">
+      <span class="copyright-text">© 2025 ProClass</span>
+    </div>
+
+     <div class="footer-divider"></div> <!-- Línea separadora -->
+
+    <div class="footer-links">
+      <a href="PoliticaPrivacidad.html">Política de privacidad</a> 
+      <a href="preguntas.html">Preguntas Frecuentes</a>
+      <a href="contacto.html">Contacto</a>
+      
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
